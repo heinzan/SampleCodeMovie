@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll">
+
+    <FrameLayout
+        android:id="@+id/fl_poster"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/test"
+            android:scaleType="fitXY"
+            android:background="@drawable/shape"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="18dp"
+        android:text="Jurassic World"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_poster" />
+
+    <LinearLayout
+        android:id="@+id/ll_part"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_marginLeft="14dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1h 30min"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Duration"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="May 24, 2019"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Release"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="English"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Language"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/over"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Overview"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_part"
+        android:layout_marginLeft="14dp"/>
+
+    <TextView
+        android:id="@+id/tv_overview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/over"
+        android:layout_marginLeft="14dp"
+        android:gravity="center_vertical|start"
+        android:maxLines="10"
+        android:ellipsize="end"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
